@@ -12,7 +12,7 @@ function renderTime(){
     // console.info("minute", Math.floor(timeCount/60)%60)
     $('.Minute-text').text(Math.floor(timeCount/60)%60)
     // console.info("hour", Math.floor(timeCount/3600)%60)
-    $('.Hour-text').text(Math.floor(timeCount/3600)%60)
+    $('.Hour-text').text(Math.floor(timeCount/3600)%24)
     // console.info("day", Math.floor(timeCount/3600/24)%24)
     timeCount -= 19294200
     timeCount = Math.floor(timeCount/3600/24)
@@ -31,9 +31,10 @@ function renderTime(){
         }
         ++currentMonth
     }
-    $('.Day-text').text(timeCount + dayinMonth[currentMonth+1])
+    $('.Day-text').text(timeCount + dayinMonth[currentMonth+1] + 9)
     let year = Math.floor(month/12)
-    month = month % 13
+    month = month - Math.floor(month/12)
+    month = month % 12
     console.info("month", month)
     console.info("year", year)
     $('.Year-text').text(year+1)
