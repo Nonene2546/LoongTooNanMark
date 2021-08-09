@@ -14,6 +14,7 @@ body{
     background-size: auto, auto, auto;
     background-position: bottom right, bottom left, center 55vh;
     background-color: #5D76A9;
+    flex-wrap: wrap;
 }
 
 body div{
@@ -32,14 +33,19 @@ body div{
     display:flex;
     flex-direction: row;
     height: auto;
-    gap: 5rem;
+    gap: 4rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .container div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 0px;
+    flex-wrap: wrap;
 }
 
 .container div div{
