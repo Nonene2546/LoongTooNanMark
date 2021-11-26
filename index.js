@@ -31,7 +31,7 @@ function renderTime(){
         }
         ++currentMonth
     }
-    $('.Day-text').text(timeCount + dayinMonth[currentMonth+1] + 9)
+    $('.Day-text').text(timeCount + 9)
     let year = Math.floor(month/12)
     month = month - Math.floor(month/12)
     month = month % 12
