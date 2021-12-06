@@ -4,28 +4,30 @@ html{
 }
 
 body{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(./รูปลุงตู่-removebg-preview.png),url(./รูปลุงตู่กลับด้าน-removebg-preview.png),url(./maxresdefault-removebg-preview.png);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: auto, auto, auto;
-    background-position: bottom right, bottom left, center 55vh;
+
+    /* background-image: url(./รูปลุงตู่-removebg-preview.png),url(./รูปลุงตู่กลับด้าน-removebg-preview.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+    background-position: bottom right, bottom left; */
     background-color: #5D76A9;
     flex-wrap: wrap;
 }
 
-body div{
+/* body div{
     background-color: #4C516D;
     border-radius: 10px;
     border: none;
-}
+} */
 
 .header{
     margin-top: -30vh;
     font-size: 4rem;
+    text-align: center;
 }
 
 .container{
@@ -49,9 +51,48 @@ body div{
 }
 
 .container div div{
-    font-size: 4rem
+    font-size: 4rem;
 }
 
 .container div span{
-    font-size: 2rem
+    font-size: 2rem;
 }
+
+img{
+    position: absolute;
+}
+
+.r-img{
+    right: 0;
+    bottom: 0;
+}
+
+.l-img{
+    left: 0;
+    bottom: 0;
+}
+
+@media (max-width: 905px){
+    html{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 850px){
+    html{
+        font-size: 10px;
+    }
+}
+
+@media(max-width:768px){
+    .l-img{
+        display: none;
+    }
+}
+
+@media(max-width: 425px){
+    .r-img{
+        height: 40%;
+    }
+}
+
